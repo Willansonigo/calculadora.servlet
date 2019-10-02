@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+          <meta charset="utf-8"/>    
+          <title>Calculadora</title>
+        <body>
+          <h1>Calculadora</h1>
+          <p>Insira o primeiro número: <input type="text" id="a"/></p><!--Tag que se encerra nela mesma,não aceita conteudo, como input não precisa fazer </input para fechar.-->
+          <p>Insira o segundo número: <input type="text" id="b"/></p><!--O <p>  </p> quebra a linha-->
+          <button onclick="somar()" > Somar (+)</button>
+          <button onclick="diminuir()"> Diminuir (-)</button>
+          <button onclick="multiplicar()" > Multiplicar (*)</button>
+          <button onclick="dividir()" > Dividir (/)</button>
+          <p>Resultado: <input type="number" id="resultado" readonly /></p><!--O campo fica somente leitura e não pode ser alterado-->
+
+          <script>
+              function somar(a, b) {
+              console.log('Somando elementos');
+                  var a = Number(document.getElementById('a').value);<!--.value e como se pegasse o atributo do objeto que é valor e sem ele fica somengte string, não mostra o numero.-->
+                  var b = Number(document.getElementById('b').value);
+                  console.log(a);
+                  console.log(b);
+                  
+                  var resultado = document.getElementById('resultado');
+                  resultado.value = a + b;
+                  }
+              function diminuir(a, b){
+              console.log('Diminuindo elementos')
+              var a = Number(document.getElementById('a').value);<!--.value e como se pegasse o atributo do objeto que é valor e sem ele fica somengte string, não mostra o numero.-->
+                  var b = Number(document.getElementById('b').value);
+                  console.log(a);
+                  console.log(b);
+                  
+                  var resultado = document.getElementById('resultado');
+                  resultado.value = a - b;
+                  }
+              function multiplicar(a, b){
+                console.log('Multiplicando elementos')
+              var a = Number(document.getElementById('a').value);<!--.value e como se pegasse o atributo do objeto que é valor e sem ele fica somengte string, não mostra o numero.-->
+                  var b = Number(document.getElementById('b').value);
+                  console.log(a);
+                  console.log(b);
+                  
+                  var resultado = document.getElementById('resultado');
+                  resultado.value = a * b;  
+              }
+              function dividir(a, b){
+                console.log('Dividindo elementos')
+              var a = Number(document.getElementById('a').value);<!--.value e como se pegasse o atributo do objeto que é valor e sem ele fica somengte string, não mostra o numero.-->
+                  var b = Number(document.getElementById('b').value);
+                  console.log(a);
+                  console.log(b);
+                  
+                  var resultado = document.getElementById('resultado');
+                  resultado.value = a / b;  
+              }
+          
+          </script>
+
+        </body>
+    </head>
+</html>
